@@ -58,17 +58,16 @@ class QuotesSpider(scrapy.Spider):
     start_urls = ['http://www.sutd.edu.sg/Admissions/Undergraduate/FAQs/']
 
     def parse(self, response):
-        wb = Workbook()
+        wb = Workbook() #output excel file for retrieved data 
         ws = wb.active   
- 
+        #Get list data of extracted info
         qn = response.xpath('//*[@class="accordion-title"]/h2').extract()
         ans = response.xpath('//*[@class="accordion-content"]').extract()
-        #excelWrite('A',qn)
-        #excelWrite('B',qn)
+        
         count = 1 
         for i in qn:
             print("Did quesiton run?")
-            ws["A"+str(count)] = BeautifulSoup(i, "lxml").text
+            ws["A"+str(count)] = BeautifulSoup(i, "lxml").text #remove html markdown syntax
             count+=1
         count = 1
         for j in ans:
