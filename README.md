@@ -87,7 +87,7 @@ $ scrapy list // shows all the scrapy files in this project file
 $ scrapy crawl filename // runs the scrapying 
 ```
 
-3B. Use scrapy to Export json,csv,xml
+3 B. Use scrapy to Export json,csv,xml
 
 Example: 
 ```python
