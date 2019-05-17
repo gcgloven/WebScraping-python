@@ -111,4 +111,5 @@ Then go to Terminal's scrapy project folder
 ```console 
 $ scrapy crawl filename -o filename.csv // output csv file 
 $ scrapy crawl filename -o filename.json // output json file 
-$ scrapy crawl filename -o filename.xml // output xml file ```
+$ scrapy crawl filename -o filename.xml // output xml file 
+```
