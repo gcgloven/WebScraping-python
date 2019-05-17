@@ -1,4 +1,4 @@
-# WebScraping-python Export to Excel
+# WebScraping-python Export to json,csv,xml
 
 This runs on ubuntu platform
 
@@ -87,3 +87,28 @@ $ scrapy list // shows all the scrapy files in this project file
 $ scrapy crawl filename // runs the scrapying 
 ```
 
+3B. Use scrapy to Export json,csv,xml
+
+Example: 
+```python
+import scrapy
+
+class QuotesSpider(scrapy.Spider):
+    name = 'quotes'
+    allowed_domains = ['www.sutd.edu.sg/Admissions/Undergraduate/FAQs']
+    start_urls = ['http://www.sutd.edu.sg/Admissions/Undergraduate/FAQs/']
+
+    def parse(self, response):
+        wb = Workbook() #output excel file for retrieved data 
+        ws = wb.active   
+        #Get list data of extracted info
+        qn = response.xpath('//*[@class="accordion-title"]/h2/text()').extract() // instead of using bs4 text() works fine as well
+        ans = response.xpath('//*[@class="accordion-content"]/text()').extract()
+        yield {'Question':qn,'Answer': ans}
+
+```
+Then go to Terminal's scrapy project folder
+```console 
+$ scrapy crawl filename -o filename.csv // output csv file 
+$ scrapy crawl filename -o filename.json // output json file 
+$ scrapy crawl filename -o filename.xml // output xml file ```
