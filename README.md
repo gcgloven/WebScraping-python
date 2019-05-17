@@ -38,7 +38,7 @@ $ cd /Destination
 $ scrapy makeproject 
 $ scrapy genspider filename url //without http
 ```
-##To Run 
+## To Run 
 
 1. Edit your .py file's "def parse(self, response):" method for the specific data you want to crawl 
    eg. data =esponse.xpath('//*[@class="yourclass"]').extract() 
