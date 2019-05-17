@@ -81,7 +81,7 @@ class QuotesSpider(scrapy.Spider):
 3. Go Terminal, go to your scrapy config files's folder. 
 
 ```console
-scrapy list // shows all the scrapy files in this project file 
-scrapy crawl filename // runs the scrapying 
+$ scrapy list // shows all the scrapy files in this project file 
+$ scrapy crawl filename // runs the scrapying 
 ```
 
