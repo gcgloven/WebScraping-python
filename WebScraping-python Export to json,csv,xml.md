@@ -58,12 +58,14 @@ In **Chrome** or **FireFox**, right click on the text field on the website and c
 ## To Run 
 
 1. Edit your .py file's **def parse(self, response):** method for the specific data you want to crawl 
-   eg. data =response.xpath('//*[@class="yourclass"]').extract() 
-       data =response.xpath('//*[@id="sg"]/div[1]/div[3]/div/div/div[1]/div/div/div[1]/div/span/span/span[1]/span').extract() 
-       this contains all the data you have.
+   eg:
+   
+       data =response.xpath('//*[@class="yourclass"]').extract() 
        
-       **How to get xpath**
-       Go to to the specific item block for your data on *Chrome* or **
+       data =response.xpath('// [@id="sg"]/div[1]/div[3]/div/div/div[1]/div/div/div[1]/div/span/span/span[1]/span').extract() 
+       
+       this contains all the data you have.
+
        
 2. Remove html markdown by using BeautifulSoup. 
 Example: 
