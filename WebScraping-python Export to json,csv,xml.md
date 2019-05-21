@@ -46,8 +46,7 @@ $ scrapy genspider filename url //without http
 ## How to get xpath of a particular text block
 In **Chrome** or **FireFox**, right click on the text field on the website and click **Inspect** or **Inspect Elements** 
 
-![image] 
-(https://github.com/gcgloven/WebScraping-python/blob/master/scrapy/quotes_spider/GetXpath.png)
+![image](https://github.com/gcgloven/WebScraping-python/blob/master/scrapy/quotes_spider/GetXpath.png)
 
 ## To Run 
 
@@ -125,3 +124,25 @@ $ scrapy crawl filename -o filename.csv // output csv file
 $ scrapy crawl filename -o filename.json // output json file 
 $ scrapy crawl filename -o filename.xml // output xml file 
 ```
+
+# Important How to not get banned
+When you are scraping a website's data, you are most likely to visit the domain too frequently and download data too rapidly. For some websites, you may get your ip banned due to the unsual traffic.
+
+## Method 1: Add a delay 
+In the folder, you will see settings.py, uncomment the ```python DOWNLOAD_DELAY```  
+Or you can manually add a sleep(3) to your scrapy code
+
+## Method 2: Add USER_AGENT
+By defining a user agent, you are tellig the browser that you are a human not a robot.
+In the folder, you will see settings.py, uncomment  ```python SER_AGENT ``` You may define it based on the browser you are using.
+Sample definition 
+```python
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1" 
+```
+
+## Method 3: Use Proxy
+Let's say you want to scrapy youtube comments for over 1000000 videos, you are using the same ip address and most likely you will be the legendary youtube user who visit 1000000 in a very short of times, you are suspicious.
+You need to rotate you ip address frequently to prevent banning. For details of rotational ip address and proxy visit:  https://github.com/aivarsk/scrapy-proxies
+
+## Method 4: Use paid servers to host your Scrapy file
+For easy hosting of scheduled scraping, you may consider scrapyhub.com for they in-built IP rotation service and hosting.
