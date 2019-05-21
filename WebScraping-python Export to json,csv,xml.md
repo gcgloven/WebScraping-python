@@ -40,12 +40,22 @@ How to create a scrapy directory
 $ cd /Destination 
 $ scrapy makeproject 
 $ scrapy genspider filename url //without http
+
 ```
+
+## How to get xpath of a particular text block
+In **Chrome** or **FireFox**, right click on the text field on the website and click **Inspect** or **Inspect Elements** 
+![image] (https://github.com/gcgloven/WebScraping-python/blob/master/scrapy/quotes_spider/GetXpath.png)
+
 ## To Run 
 
-1. Edit your .py file's "def parse(self, response):" method for the specific data you want to crawl 
-   eg. data =esponse.xpath('//*[@class="yourclass"]').extract() 
+1. Edit your .py file's **def parse(self, response):** method for the specific data you want to crawl 
+   eg. data =response.xpath('//*[@class="yourclass"]').extract() 
+       data =response.xpath('//*[@id="sg"]/div[1]/div[3]/div/div/div[1]/div/div/div[1]/div/span/span/span[1]/span').extract() 
        this contains all the data you have.
+       
+       **How to get xpath**
+       Go to to the specific item block for your data on *Chrome* or **
        
 2. Remove html markdown by using BeautifulSoup. 
 Example: 
