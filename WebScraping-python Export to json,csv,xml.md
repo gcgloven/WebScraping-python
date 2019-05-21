@@ -45,7 +45,9 @@ $ scrapy genspider filename url //without http
 
 ## How to get xpath of a particular text block
 In **Chrome** or **FireFox**, right click on the text field on the website and click **Inspect** or **Inspect Elements** 
-![image] (https://github.com/gcgloven/WebScraping-python/blob/master/scrapy/quotes_spider/GetXpath.png)
+
+![image] 
+(https://github.com/gcgloven/WebScraping-python/blob/master/scrapy/quotes_spider/GetXpath.png)
 
 ## To Run 
 
