@@ -136,12 +136,12 @@ $ scrapy crawl filename -o filename.xml // output xml file
 When you are scraping a website's data, you are most likely to visit the domain too frequently and download data too rapidly. For some websites, you may get your ip banned due to the unsual traffic.
 
 ## Method 1: Add a delay 
-In the folder, you will see settings.py, uncomment the **DOWNLOAD_DELAY**  
+In the folder, you will see settings.py, uncomment the ***DOWNLOAD_DELAY***  
 Or you can manually add a sleep(3) to your scrapy code
 
 ## Method 2: Add USER_AGENT
 By defining a user agent, you are tellig the browser that you are a human not a robot.
-In the folder, you will see settings.py, uncomment  ```python SER_AGENT ``` You may define it based on the browser you are using.
+In the folder, you will see settings.py, uncomment  ***USER_AGENT*** You may define it based on the browser you are using.
 Sample definition 
 ```python
 USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1" 
