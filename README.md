@@ -6,7 +6,7 @@ For the basic scrapying method:
 [WebScraping-python Export to json,csv,xml](https://github.com/gcgloven/WebScraping-python/blob/master/WebScraping-python%20Export%20to%20json%2Ccsv%2Cxml.md)
 
  
-# Helpful Data Cleaning code 
+# Helpful Data Cleaning methods 
 ```python 
 del ls[0] #remove list item with index[0]
 string.strip() # remove the leading and trailing spaces
