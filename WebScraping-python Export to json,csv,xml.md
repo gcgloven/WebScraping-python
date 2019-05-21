@@ -1,8 +1,12 @@
 # WebScraping-python Export to json,csv,xml
 
 This runs on ubuntu platform
-
-## Installation
+# Table of Contents
+1. [Installation](#1)
+2. [How to get xpath of a particular text block](#2)
+3. [To Run](#3)
+4. [Important How to not get banned](#4)
+## Installation <a name="1"></a>
 Install Scrapy 
 sudo pip install scrapy 
 Install 
@@ -13,7 +17,7 @@ $ sudo apt-get install python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev
 $ sudo pip3 install bs4 // BeautifulSoup
 $ sudo pip3 install scrapy // Scrapy
 ```
-## Scrapy Shell
+## Scrapy Shell 
 ```console
 $ Scraphy shell
 
@@ -43,12 +47,12 @@ $ scrapy genspider filename url //without http
 
 ```
 
-## How to get xpath of a particular text block
+## How to get xpath of a particular text block <a name="2"></a>
 In **Chrome** or **FireFox**, right click on the text field on the website and click **Inspect** or **Inspect Elements** 
 
 ![image](https://github.com/gcgloven/WebScraping-python/blob/master/scrapy/quotes_spider/GetXpath.png)
 
-## To Run 
+## To Run <a name="3"></a>
 
 1. Edit your .py file's **def parse(self, response):** method for the specific data you want to crawl 
    eg. data =response.xpath('//*[@class="yourclass"]').extract() 
@@ -125,7 +129,7 @@ $ scrapy crawl filename -o filename.json // output json file
 $ scrapy crawl filename -o filename.xml // output xml file 
 ```
 
-# Important How to not get banned
+# Important How to not get banned <a name="4"></a>
 When you are scraping a website's data, you are most likely to visit the domain too frequently and download data too rapidly. For some websites, you may get your ip banned due to the unsual traffic.
 
 ## Method 1: Add a delay 
