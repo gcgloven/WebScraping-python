@@ -134,14 +134,14 @@ $ scrapy crawl filename -o filename.json // output json file
 $ scrapy crawl filename -o filename.xml // output xml file 
 ```
 <a name="4"></a>
-# Important How to not get banned 
+## Important How to not get banned 
 When you are scraping a website's data, you are most likely to visit the domain too frequently and download data too rapidly. For some websites, you may get your ip banned due to the unsual traffic.
 
-## Method 1: Add a delay 
+### Method 1: Add a delay 
 In the folder, you will see settings.py, uncomment the ***DOWNLOAD_DELAY***  
 Or you can manually add a sleep(3) to your scrapy code
 
-## Method 2: Add USER_AGENT
+### Method 2: Add USER_AGENT
 By defining a user agent, you are tellig the browser that you are a human not a robot.
 In the folder, you will see settings.py, uncomment  ***USER_AGENT*** You may define it based on the browser you are using.
 Sample definition 
@@ -149,9 +149,9 @@ Sample definition
 USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1" 
 ```
 
-## Method 3: Use Proxy
+### Method 3: Use Proxy
 Let's say you want to scrapy youtube comments for over 1000000 videos, you are using the same ip address and most likely you will be the legendary youtube user who visit 1000000 in a very short of times, you are suspicious.
 You need to rotate you ip address frequently to prevent banning. For details of rotational ip address and proxy visit:  https://github.com/aivarsk/scrapy-proxies
 
-## Method 4: Use paid servers to host your Scrapy file
+### Method 4: Use paid servers to host your Scrapy file
 For easy hosting of scheduled scraping, you may consider scrapyhub.com for they in-built IP rotation service and hosting.
