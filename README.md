@@ -14,4 +14,5 @@ string.lower() # convert all char to lower case
 string.upper() # convert all char to upper case
 string.replace("\r\n\t\t\t"," ") #replace specific string \r\n\t\t\t to " "
 string[2:] #start string at index 2
+string[:-1] #read everything before last chara
 ```
